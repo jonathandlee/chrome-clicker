@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Submit Button Noise",
+  "version": "1.0",
+  "description": "Plays a noise when a 'Submit' button is clicked.",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "sound.mp3"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
